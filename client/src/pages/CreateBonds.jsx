@@ -61,6 +61,9 @@ export function CreateBonds() {
             </button>
           </Link>
         </form>
+        <div className="flex justify-center">
+          <h2 className="mt-14 text-white ">BondsApp 2024</h2>
+        </div>
       </div>
     </section>
   );

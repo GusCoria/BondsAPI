@@ -1,11 +1,17 @@
 // src/components/Navigation.js
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { TESelect } from "tw-elements-react";
 
 export function Navigation() {
+  const [selectedCoin, setSelectedCoin] = useState("Coin");
+
+  const handleSelect = (eventKey) => {
+    setSelectedCoin(eventKey);
+  };
+
   const data = [
     { text: "MXN", value: 1 },
     { text: "USD", value: 2 },
@@ -35,18 +41,20 @@ export function Navigation() {
             variant="info"
           >
             <Dropdown.Item href="/my">My Bonds</Dropdown.Item>
-            <Dropdown.Item href="/by">Buy Bonds</Dropdown.Item>
+            <Dropdown.Item href="/buy">Buy Bonds</Dropdown.Item>
           </DropdownButton>
           </div>
 
           <div>
+
           <DropdownButton
             id="coin"
-            title="Coin"
+            title={selectedCoin}
             variant="info"
+            onSelect={handleSelect}
           >
-            <Dropdown.Item href="">MXN</Dropdown.Item>
-            <Dropdown.Item href="">USD</Dropdown.Item>
+            <Dropdown.Item eventKey="MXN">MXN</Dropdown.Item>
+            <Dropdown.Item eventKey="USD">USD</Dropdown.Item>
           </DropdownButton>
           </div>
           
