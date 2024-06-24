@@ -1,4 +1,4 @@
-#Lenguajes ocupados: Pyhton, Node.js
+# Lenguajes ocupados: Pyhton, Node.js
 
 # Instalacion BackEnd
 
@@ -33,3 +33,10 @@
   - http://localhost:5173/my
   - http://localhost:5173/buy
 
+# Imagenes demostrativas del interfaz proyecto
+
+![Vista login del usuario](imagenes/signin.png)
+![Vista registro de usuario](imagenes/signup.png)
+![Vista bonds del usuario](imagenes/myBonds.png)
+![Vista compra de bonds](imagenes/buyBonds.png)
+![Vista resgistro de Bond](imagenes/createBond.png)
