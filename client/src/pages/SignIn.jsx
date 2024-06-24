@@ -3,13 +3,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { TEInput } from "tw-elements-react";
 import axiosInstance from "../services/axiosInstance";
 import { Navigation } from "../components/Navigation";
-import toast from "react-hot-toast";
+import toast from "react-hot-toast"; // carteles de notificacion
+
+{
+  /* funcion para obtener el login y el token para las peticiones con el backend*/
+}
 
 export function SignIn() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  {
+    /* barra de navegacion de signin y singup */
+  }
 
   const handleSignIn = async (e) => {
     e.preventDefault();
@@ -23,14 +30,16 @@ export function SignIn() {
       if (response.status === 200) {
         // Guardar el token
         localStorage.setItem("accessToken", response.data.access);
+
+        // guarda el username del usuario para manter informacion del usuario y realizar depues peticiones
         localStorage.setItem("username", username);
-        toast.success('Successfully');
+        toast.success("Successfully");
         navigate("/my");
       } else {
-        toast.error('Invalid username or password');
+        toast.error("Invalid username or password");
       }
     } catch (error) {
-      toast.error('Invalid username or password');
+      toast.error("Invalid username or password");
     }
   };
 
@@ -42,6 +51,7 @@ export function SignIn() {
           <h1 className="text-4xl font-bold mb-6 text-center">Sign In</h1>
           <form onSubmit={handleSignIn}>
             <div className="mb-6">
+              {/* cuadro imput username*/}
               <label htmlFor="username" className="block text-white mb-2">
                 Username
               </label>
@@ -53,7 +63,7 @@ export function SignIn() {
                 className="text-white w-full px-3 py-2 border-gray-300"
               />
             </div>
-
+            {/* cuadro imput contraseña */}
             <div className="mb-6">
               <label htmlFor="password" className="block text-white mb-2">
                 Password
@@ -78,6 +88,7 @@ export function SignIn() {
 
             <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
               Don't have an account?
+              {/* link para mandar a la pagina de signup */}
               <Link
                 to="/signup"
                 className="text-blue-500 hover:text-blue-700 ml-1"

@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+#inicio de las urls a donde nos podremos dirigir
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("bonds/", include('Bonds.urls')),

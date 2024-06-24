@@ -5,6 +5,9 @@ import axiosInstance from "../services/axiosInstance"; // Asegúrate de importar
 import toast from "react-hot-toast";
 
 export function SignUp() {
+  {
+    /* constantes donde se guardaran lo que se enviara para realizar el registro de usuario*/
+  }
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -15,7 +18,7 @@ export function SignUp() {
     e.preventDefault();
 
     if (password !== password2) {
-      toast.error('Passwords do not match')
+      toast.error("Passwords do not match");
       return;
     }
 
@@ -29,10 +32,10 @@ export function SignUp() {
     try {
       await axiosInstance.post("/bonds/register/", userData);
       // Aquí podrías redirigir al usuario a una página de éxito o hacer alguna otra acción
-      setError(""); // Limpia el mensaje de error en caso de éxito
-      toast.success('Successfully')
+      setError("");
+      toast.success("Successfully");
     } catch (error) {
-      toast.error('Error creating user, cheack the user or email')
+      toast.error("Error creating user, cheack the user or email");
       setError("Error creating user, please try again.");
     }
   };
@@ -107,8 +110,9 @@ export function SignUp() {
               />
             </div>
 
-            {/* mensaje de error */}
-            {error && <div className="text-red-500 text-center mb-6">{error}</div>}
+            {error && (
+              <div className="text-red-500 text-center mb-6">{error}</div>
+            )}
 
             <div>
               {/* botón registrar */}

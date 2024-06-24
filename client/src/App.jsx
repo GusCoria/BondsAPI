@@ -4,17 +4,17 @@ import { SignIn } from "./pages/SignIn";
 import { MyBonds } from "./pages/MyBonds";
 import { CreateBonds } from "./pages/CreateBonds";
 import { BuyBonds } from "./pages/BuyBonds";
-import { Navigation } from "./components/Navigation";
-
 import {Toaster} from "react-hot-toast";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+{/* funcion principal para desplegar la aplicacion*/}
 function App() {
+  
   return (
     <BrowserRouter>
       <div className="container mx-auto">
-        {/*barra de navegacion*/}
-        
+ 
         {/*rutas de la api*/}
         <Routes>
           <Route path="/" element={<Navigate to="/signin" />} />

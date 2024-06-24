@@ -1,3 +1,5 @@
+
+
 import axios from 'axios';
 
 const axiosInstance = axios.create({
@@ -5,7 +7,7 @@ const axiosInstance = axios.create({
   withCredentials: true  
 });
 
-// Interceptor para agregar el token JWT a las solicitudes
+//  agregar el token JWT a las solicitudes que se realizarn GPPD
 axiosInstance.interceptors.request.use(
   config => {
     const accessToken = localStorage.getItem('accessToken');

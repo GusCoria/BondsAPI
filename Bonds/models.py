@@ -1,7 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User #se importa el usuario para ocupar el ya definido
     
     
+#modelo de bond que se creara en la DB
 
 class Bonds(models.Model):
     name = models.CharField(max_length= 40)

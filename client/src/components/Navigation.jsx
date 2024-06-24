@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
-export function Navigation({ onSelectCurrency }) {
-
-
+// funcion de barra de navegacion del signin y signup
+export function Navigation({ }) {
   return (
     <nav className="bg-zinc-800 p-4">
       <div className="container mx-auto flex justify-between items-center">

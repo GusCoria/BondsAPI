@@ -4,6 +4,8 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import axiosInstance from "../services/axiosInstance";
 
+//barra de navegacion en la app que tendra el logout, intercambio de pestañas y cambio de moneda
+
 export function NavigationApp({ onSelectCurrency }) {
   const [selectedCoin, setSelectedCoin] = useState("MXN");
   const navigate = useNavigate();
@@ -12,7 +14,7 @@ export function NavigationApp({ onSelectCurrency }) {
     setSelectedCoin(eventKey);
     onSelectCurrency(eventKey); // Llama a la función de selección de moneda del padre
   };
-
+  // funcion del boton logout para terminar sesion y eliminar el username del usuario que ingreso
   const handleLogout = async () => {
     try {
         await axiosInstance.post('/bonds/logout/');
@@ -28,7 +30,7 @@ export function NavigationApp({ onSelectCurrency }) {
     <nav className="bg-zinc-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-white text-3xl font-bold">BondsApp</h1>
-
+        {/*boton logout */}
         <div className="flex items-center space-x-4">
           <div>
             <button
@@ -39,7 +41,7 @@ export function NavigationApp({ onSelectCurrency }) {
               Logout
             </button>
           </div>
-
+          {/* boton desplegable paginas my bonds y buy bonds*/}
           <div>
             <DropdownButton
               id="Actions"
@@ -50,16 +52,14 @@ export function NavigationApp({ onSelectCurrency }) {
               <Dropdown.Item href="/buy">Buy Bonds</Dropdown.Item>
             </DropdownButton>
           </div>
-
+          {/* boton desplegable para cambiar de mone no me quedo :(*/}
           <div>
             <DropdownButton
               id="coin"
               title={selectedCoin}
               variant="info"
-              onSelect={handleSelect}
             >
-              <Dropdown.Item eventKey="MXN">MXN</Dropdown.Item>
-              <Dropdown.Item eventKey="USD">USD</Dropdown.Item>
+              <Dropdown.Item >MXN</Dropdown.Item>
             </DropdownButton>
           </div>
         </div>
