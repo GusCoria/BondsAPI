@@ -1,7 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { MybondsList } from "../components/MybondsList";
+import MybondsList from "../components/MybondsList";
+import { NavigationApp } from "../components/NavigationApp";
 
 export function MyBonds() {
-  return <MybondsList/>
+  return (
+    <div>
+      <NavigationApp />
+      <div>
+        <MybondsList />
+      </div>
+    </div>
+  );
 }
