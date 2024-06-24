@@ -1,0 +1,94 @@
+
+users
+
+{"email": "gus@gmail.com", "username": "gus", "password": "123456789g", "password2": "123456789g"}
+
+{"email": "user1@gmail.com", "username": "user1", "password": "hbedwhbwehb12", "password2": "hbedwhbwehb12"}
+
+{"email": "user12@gmail.com", "username": "user2", "password": "hbedwhbwehb12", "password2": "hbedwhbwehb12"}
+
+{"email": "user3@gmail.com", "username": "user3", "password": "hbedwhbwehb12", "password2": "hbedwhbwehb12"}
+
+Bonds list
+[
+    {
+        "id": 1,
+        "name": "bond1",
+        "numer": 100,
+        "price": "200.0000",
+        "seller": 1,
+        "buyer": 2
+    },
+    {
+        "id": 2,
+        "name": "bond2",
+        "numer": 154,
+        "price": "200.0000",
+        "seller": 2,
+        "buyer": 1
+    },
+    {
+        "id": 3,
+        "name": "bond2",
+        "numer": 154,
+        "price": "200.0000",
+        "seller": 2,
+        "buyer": null
+    },
+    {
+        "id": 4,
+        "name": "bond158",
+        "numer": 100,
+        "price": "200.0000",
+        "seller": 1,
+        "buyer": null
+    },
+    {
+        "id": 5,
+        "name": "bond234",
+        "numer": 125,
+        "price": "235.1545",
+        "seller": 3,
+        "buyer": 1
+    },
+    {
+        "id": 6,
+        "name": "bond24",
+        "numer": 12,
+        "price": "35.1545",
+        "seller": 5,
+        "buyer": 1
+    },
+    {
+        "id": 7,
+        "name": "bond14",
+        "numer": 25,
+        "price": "5.1545",
+        "seller": 1,
+        "buyer": null
+    },
+    {
+        "id": 8,
+        "name": "bond78",
+        "numer": 255,
+        "price": "75.1545",
+        "seller": 1,
+        "buyer": null
+    },
+    {
+        "id": 9,
+        "name": "bond24",
+        "numer": 12,
+        "price": "35.1545",
+        "seller": 2,
+        "buyer": null
+    },
+    {
+        "id": 10,
+        "name": "grieta",
+        "numer": 1233,
+        "price": "148.0000",
+        "seller": 1,
+        "buyer": null
+    }
+]
